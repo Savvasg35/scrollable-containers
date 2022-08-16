@@ -1,0 +1,47 @@
+{
+  "name": "next-gen-scrollable-containers",
+  "version": "1.0.3",
+  "description": "",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.4",
+    "@storybook/addon-actions": "^6.5.10",
+    "@storybook/addon-essentials": "^6.5.10",
+    "@storybook/addon-interactions": "^6.5.10",
+    "@storybook/addon-links": "^6.5.10",
+    "@storybook/builder-webpack4": "^6.5.10",
+    "@storybook/manager-webpack4": "^6.5.10",
+    "@storybook/react": "^6.5.10",
+    "@storybook/testing-library": "^0.0.13",
+    "@types/react": "^18.0.17",
+    "@types/styled-components": "^5.1.26",
+    "babel-loader": "^8.2.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-is": "^18.2.0",
+    "rollup": "^2.78.0",
+    "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-terser": "^7.0.2",
+    "styled-components": "^5.3.5",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^5.3.5"
+  }
+}
