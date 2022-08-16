@@ -4,14 +4,15 @@ import { Story, Meta } from "@storybook/react";
 import { Carousel } from "../components/Carousel";
 import { CarouselProps } from "../components/Carousel/Carousel.types";
 
+import "./Carousel.css";
+
 export default {
   component: Carousel,
 } as Meta<typeof Carousel>;
 
 export const Primary: Story<CarouselProps> = (args) => {
   return (
-    <Carousel {...args}>
-      <li>1</li>
+    <Carousel {...args} className="carousel">
       <li>2</li>
     </Carousel>
   );

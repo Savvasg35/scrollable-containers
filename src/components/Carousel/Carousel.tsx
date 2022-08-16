@@ -1,4 +1,10 @@
-import React, { FC } from "react";
+import React, {
+  ReactNode,
+  Children,
+  isValidElement,
+  cloneElement,
+  ReactElement,
+} from "react";
 import styled from "styled-components";
 
 import { CarouselProps } from "./Carousel.types";
@@ -8,34 +14,63 @@ const StyledCarousel = styled.ul<CarouselProps>`
   padding: 0;
   box-sizing: border-box;
   display: flex;
+  flex-direction: ${({ vertical }) => vertical && "column"};
   list-style: none;
-  width: ${({ width, fullWidth }) => width || (fullWidth ? "100vw" : "600px")};
+  width: ${({ width, fullWidth }) => width || (fullWidth && "100vw")};
   height: ${({ height, fullHeight }) =>
-    height || (fullHeight ? "100vh" : "600px")};
+    height || (fullHeight ? "100vh" : "200px")};
   overflow: auto;
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: ${({ vertical }) =>
+    vertical ? "y mandatory" : "x mandatory"};
 
   & > * {
-    display: grid;
-    place-items: center;
-    color: white;
-    font-size: 3rem;
-
-    aspect-ratio: 2/1;
     width: 100%;
+    height: 100%;
     flex-shrink: 0;
-    scroll-snap-align: start;
+    scroll-snap-align: center;
   }
 
   & > *:nth-child(odd) {
-    background-color: salmon;
+    background-color: ${({ disableListDefaultStyles }) =>
+      !disableListDefaultStyles && "salmon"};
   }
 
   & > *:nth-child(even) {
-    background-color: rebeccapurple;
+    background-color: ${({ disableListDefaultStyles }) =>
+      !disableListDefaultStyles && "rebeccapurple"};
   }
 `;
 
-export const Carousel: FC<CarouselProps> = ({ children, ...rest }) => {
-  return <StyledCarousel {...rest}>{children}</StyledCarousel>;
-};
+export function Carousel({
+  children,
+  horizontal = true,
+  vertical = false,
+  disableListDefaultStyles = true,
+  ...rest
+}: CarouselProps) {
+  const updatedChildren = childrenWithProps(children);
+
+  return (
+    <StyledCarousel
+      disableListDefaultStyles={disableListDefaultStyles}
+      vertical={vertical}
+      horizontal={horizontal}
+      {...rest}
+    >
+      {updatedChildren}
+    </StyledCarousel>
+  );
+}
+
+function childrenWithProps(children: ReactElement | ReactElement[]) {
+  return Children.map(
+    children,
+    (child: ReactElement<{ id: string }>, index) => {
+      if (isValidElement(child)) {
+        return cloneElement(child, { id: `carousel-${index}` });
+      }
+
+      return child;
+    }
+  );
+}

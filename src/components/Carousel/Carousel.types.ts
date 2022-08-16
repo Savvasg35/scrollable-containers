@@ -1,8 +1,12 @@
-import { ReactNode } from "react";
+import { ReactElement } from "react";
 export interface CarouselProps {
-  children: ReactNode;
+  children: ReactElement[] | ReactElement;
   fullWidth?: boolean;
   fullHeight?: boolean;
   width?: string;
   height?: string;
+  className?: string;
+  vertical?: boolean;
+  horizontal?: boolean;
+  disableListDefaultStyles?: boolean;
 }

@@ -1,7 +1,7 @@
 {
   "name": "next-gen-scrollable-containers",
-  "version": "1.0.3",
-  "description": "",
+  "version": "0.1.0",
+  "description": "Simple React lightweight scrollable containers",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "scripts": {
@@ -10,8 +10,8 @@
     "build-storybook": "build-storybook"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Savvas Giannoukas",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.18.10",
     "@rollup/plugin-commonjs": "^22.0.2",
