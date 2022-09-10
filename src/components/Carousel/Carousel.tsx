@@ -8,22 +8,10 @@ import React, {
   useEffect,
 } from "react";
 import styled from "styled-components";
-import ArrowRight from "../assets/right-arrow.svg";
-import ArrowLeft from "../assets/left-arrow.svg";
+import ArrowRight from "../assets/ArrowRight";
+import ArrowLeft from "../assets/ArrowLeft";
 
-import { CarouselProps, PaginationArrowProps } from "./Carousel.types";
-
-const StyledArrowLeft = styled(ArrowLeft)<PaginationArrowProps>`
-  width: 20px;
-  height: 20px;
-  color: ${({ paginationArrowColor }) => paginationArrowColor || "black"};
-`;
-
-const StyledArrowRight = styled(ArrowRight)<PaginationArrowProps>`
-  height: 20px;
-  width: 20px;
-  color: ${({ paginationArrowColor }) => paginationArrowColor || "black"};
-`;
+import { CarouselProps } from "./Carousel.types";
 
 const StyledCarousel = styled.ul<CarouselProps>`
   margin: 0;
@@ -147,10 +135,10 @@ export function Carousel({
         {pagination && !vertical && (
           <>
             <StyledBackButton onClick={handleBack}>
-              <StyledArrowLeft paginationArrowColor={paginationArrowColor} />
+              <ArrowLeft paginationArrowColor={paginationArrowColor} />
             </StyledBackButton>
             <StyledNextButton onClick={handleNext}>
-              <StyledArrowRight paginationArrowColor={paginationArrowColor} />
+              <ArrowRight paginationArrowColor={paginationArrowColor} />
             </StyledNextButton>
           </>
         )}

@@ -1,6 +1,6 @@
 {
   "name": "next-gen-scrollable-containers",
-  "version": "0.2.0",
+  "version": "0.3.2",
   "description": "Simple React lightweight scrollable containers",
   "repository": "https://github.com/Savvasg35/scrollable-containers",
   "main": "dist/cjs/index.js",

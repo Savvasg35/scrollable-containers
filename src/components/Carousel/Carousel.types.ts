@@ -12,7 +12,3 @@ export interface CarouselProps {
   pagination?: boolean;
   paginationArrowColor?: string;
 }
-
-export interface PaginationArrowProps {
-  paginationArrowColor?: string;
-}
