@@ -14,6 +14,8 @@ That package is still in progress, however it is available for simple use cases.
   horizontal
   vertical
   disableListDefaultStyles
+  pagination
+  paginationArrowColor="#AEAEAE"
 >
   // ....
 </Carousel>
@@ -46,6 +48,14 @@ The `horizontal` prop is by default true and that make the carousel to be `horiz
 ### `vertical` (boolean)
 
 The `vertical` prop gives you the option to have a `vertical` scrollable container, and will override `horizontal`
+
+### `pagination` (string)
+
+Pagination is a boolean value that adds arrows in order to navigate the container. The pagination method only works for horizontal containers.
+
+### `paginationArrowColor` (string)
+
+paginationArrowColor accept a hex string value in order to update the color of the pagination arrows
 
 ### `disableListDefaultStyles` (boolean)
 

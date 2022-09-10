@@ -9,4 +9,10 @@ export interface CarouselProps {
   vertical?: boolean;
   horizontal?: boolean;
   disableListDefaultStyles?: boolean;
+  pagination?: boolean;
+  paginationArrowColor?: string;
+}
+
+export interface PaginationArrowProps {
+  paginationArrowColor?: string;
 }

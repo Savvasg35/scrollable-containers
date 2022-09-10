@@ -1,7 +1,8 @@
 {
   "name": "next-gen-scrollable-containers",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple React lightweight scrollable containers",
+  "repository": "https://github.com/Savvasg35/scrollable-containers",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "scripts": {
@@ -25,6 +26,7 @@
     "@storybook/manager-webpack4": "^6.5.10",
     "@storybook/react": "^6.5.10",
     "@storybook/testing-library": "^0.0.13",
+    "@svgr/rollup": "^6.3.1",
     "@types/react": "^18.0.17",
     "@types/styled-components": "^5.1.26",
     "babel-loader": "^8.2.5",
@@ -43,5 +45,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^5.3.5"
+  },
+  "dependencies": {
+    "@styled-icons/fa-solid": "^10.46.0"
   }
 }
