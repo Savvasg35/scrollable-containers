@@ -8,7 +8,8 @@ import React, {
   useEffect,
 } from "react";
 import styled from "styled-components";
-import { ArrowLeft, ArrowRight } from "@styled-icons/fa-solid";
+import ArrowRight from "../assets/right-arrow.svg";
+import ArrowLeft from "../assets/left-arrow.svg";
 
 import { CarouselProps, PaginationArrowProps } from "./Carousel.types";
 
@@ -17,6 +18,7 @@ const StyledArrowLeft = styled(ArrowLeft)<PaginationArrowProps>`
   height: 20px;
   color: ${({ paginationArrowColor }) => paginationArrowColor || "black"};
 `;
+
 const StyledArrowRight = styled(ArrowRight)<PaginationArrowProps>`
   height: 20px;
   width: 20px;
